@@ -58,7 +58,15 @@ body {
 }
 
 .card-container{
+    max-width: 30rem;
     margin-bottom: 3em;
+}
+.align_left{
+  float: left;
+}
+
+.align_right{
+  float: right;
 }
 
 .cornsilkbg{

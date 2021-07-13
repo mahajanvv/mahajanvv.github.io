@@ -16,8 +16,8 @@
 
     <style>
         body{
-            background-image: url("");
-            background-repeat: no-repeat;
+            background-image: url("./gallerybg.jpg");
+            background-repeat: repeat-y;
             background-position-x: center;
             background-position-y: center;
             background-size: cover;
@@ -108,6 +108,7 @@
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -120,13 +121,16 @@
                     <img src="img3.jpeg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img7.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img4.jpeg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
                     <img src="img5.jpeg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
                     <img src="img6.jpeg" class="d-block w-100" alt="..." >
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img7.jpeg" class="d-block w-100" alt="..." >
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -142,9 +146,7 @@
             </div>
         </main>
 
-        <footer class="mt-auto text-white-50">
-            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-        </footer>
+        
     </div>
 
     
@@ -155,7 +157,7 @@
         var galleryElement = document.getElementById("gallery");
         var row = null;
         var col = null;
-        var totalImages = 7;
+        var totalImages = 11;
         for(var i=1; i<=totalImages; i++){
             if ((i-1)%3 == 0){
                 if(row != null){

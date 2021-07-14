@@ -112,25 +112,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="img1.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img1.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img2.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img2.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img3.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img3.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img4.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img4.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img5.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img5.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img6.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img6.jpg" class="d-block w-100" alt="..." >
                   </div>
                   <div class="carousel-item">
-                    <img src="img7.jpeg" class="d-block w-100" alt="..." >
+                    <img src="img7.jpg" class="d-block w-100" alt="..." >
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -157,7 +157,7 @@
         var galleryElement = document.getElementById("gallery");
         var row = null;
         var col = null;
-        var totalImages = 11;
+        var totalImages = 49;
         for(var i=1; i<=totalImages; i++){
             if ((i-1)%3 == 0){
                 if(row != null){
@@ -168,7 +168,7 @@
             }
             col = document.createElement("div");
             col.setAttribute("class", "col");
-            col.innerHTML = "<img src='img"+i+".jpeg' class='d-block w-100' onclick='loadModal("+i+")'></img>";
+            col.innerHTML = "<img src='img"+i+".jpg' class='d-block w-100' onclick='loadModal("+i+")'></img>";
             
             row.appendChild(col);
         }
@@ -180,14 +180,14 @@
 
             var img = document.createElement("div");
             img.setAttribute("class", "carousel-item active");
-            img.innerHTML = "<img src='img"+itr+".jpeg' class='d-block w-100'>";
+            img.innerHTML = "<img src='img"+itr+".jpg' class='d-block w-100'>";
 
             innerHTML.appendChild(img);
             
             for(var index=itr+1; index <= totalImages; index++){
                 img = document.createElement("div");
                 img.setAttribute("class", "carousel-item");
-                img.innerHTML = "<img src='img"+index+".jpeg' class='d-block w-100'>";
+                img.innerHTML = "<img src='img"+index+".jpg' class='d-block w-100'>";
 
                 innerHTML.appendChild(img);
             }
@@ -195,7 +195,7 @@
             for(var index = 1; index < itr; index++){
                 img = document.createElement("div");
                 img.setAttribute("class", "carousel-item");
-                img.innerHTML = "<img src='img"+index+".jpeg' class='d-block w-100'>";
+                img.innerHTML = "<img src='img"+index+".jpg' class='d-block w-100'>";
 
                 innerHTML.appendChild(img);
             }

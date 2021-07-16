@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <style>
         body{
             background-image: url("./homepage-background.jpg");
@@ -44,6 +45,7 @@
         #weddingCountDown{
             font-size: 8em;
         }
+
     </style>
 
     
@@ -210,7 +212,15 @@
                       <h1 class="card-title w3-cursive">Wedding</h1>
                       <p class="card-text w3-cursive">Venue: Parichay Mangalkaryalya, Shepvadi Parisar, Parli Road, Ambajogai, Maharashtra, India-431517</p>
                       <p class="card-text w3-cursive">Time: Morning 11:25 AM </p>
-                      <a type="button" class="btn btn-outline-success btn-lg" href="https://meet.google.com/fdy-fuds-qzx">Attend Online</a>
+                      <div>
+                        <span>
+                          <a type="button" class="btn btn-outline-success btn-lg" href="https://meet.google.com/fdy-fuds-qzx">Attend Online</a>
+                        </span>
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Please join the link by 11:15AM">
+                          <i class="bi bi-info-circle" style="color: #198754; font-size: 1.5rem; margin-left: 0.5rem;"></i>
+                        </span>
+                      </div>
+                      
                       <p class="card-text"><small class="text-muted w3-cursive" id="WeddingCountDown"></small></p>
                     </div>
                 
@@ -241,6 +251,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
 
     <script>
+        /**
+        * Tooltip initialisation
+        */
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
         // Set the date we're counting down to
         var mehandiDate = new Date("Jul 25, 2021 19:30:00").getTime();
         var banglesCeremonyDate = new Date("Jul 26, 2021 19:30:00").getTime();

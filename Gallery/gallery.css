@@ -69,3 +69,8 @@ img:hover{
   max-width: 58rem;
   opacity: 1;
 }
+
+
+img {
+  pointer-events: none;
+}

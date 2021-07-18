@@ -76,3 +76,7 @@ body {
 .goldcolor{
   color: gold;
 }
+
+img {
+  pointer-events: none;
+}

@@ -70,7 +70,6 @@ img:hover{
   opacity: 1;
 }
 
-
-img {
+.carousel-item > img{
   pointer-events: none;
 }

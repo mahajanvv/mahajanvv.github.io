@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <style>
         body{
@@ -81,6 +82,11 @@
 
             <h3 style="margin-top: 1em;" class="w3-cursive goldcolor">Venue: Parichay Mangalkaryalya, Shepvadi Parisar, Parli Road, Ambajogai, Maharashtra, India-431517</h3>
 
+            <p><a href="https://goo.gl/maps/VkFNsmRGrcSyvZci8" class="bi bi-geo-alt-fill" data-bs-toggle="tooltip" name="locationTooltip" data-bs-trigger="manual" data-bs-placement="right" title="click me to get directions" style="color: red; font-size: larger; margin-top: 1em;"></a></p>
+
+            <!-- <div id="blink3" style="margin-top: 1em;"> -->
+            <p><a type="button" class="btn btn-outline-success btn-lg" href="https://meet.google.com/fdy-fuds-qzx">Attend Online</a></p>
+            <!-- </div> -->
         </main>
 
     </div>
@@ -98,6 +104,19 @@
         setInterval(function() {
             blink2.style.opacity = (blink2.style.opacity == 0 ? 1 : 0);
         }, 500);
+
+        var blink3 = document.getElementById("blink3");
+        setInterval(function() {
+            blink3.style.opacity = (blink3.style.opacity == 0 ? 1 : 0);
+        }, 500);
+
+        /**
+        * Tooltip initialisation
+        */
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
 
         // Set the date we're counting down to
         var countDownDate = new Date("Jul 29, 2021 11:25:00").getTime();
@@ -127,6 +146,12 @@
             document.getElementById("weddingCountDown").innerHTML = "";
             }
         }, 1000);
+
+        document.getElementsByName("locationTooltip").forEach((element)=>{
+          var tooltip = bootstrap.Tooltip.getInstance(element) // Returns a Bootstrap tooltip instance
+          console.log(element);
+          tooltip.show();
+        });
     </script>
         
   </body>
